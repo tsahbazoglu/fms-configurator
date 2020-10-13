@@ -1,5 +1,3 @@
-# fms-configurator
-= introduction
 FMS project is based on LCNC (Low Code No Code) design aproach
 
 Core of this project reads configuration scripts from mongodb and implelmnet it to bring the website to alive
@@ -13,3 +11,4 @@ you can find a lot of example in fms-tcma repository wich represent the live sit
 All parameers you set in configuration files wil be explaned in the repository.
 
 But I plan to prepare a react tool to satisfy fms users. 
+
