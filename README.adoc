@@ -1,16 +1,15 @@
 = introduction
 
-FMS project is based on LCNC (Low Code No Code) design aproach
+FMS project is based on LCNC (Low Code No Code) design approach
 
-Core of this project reads configuration scripts from mongodb and implelmnet it to bring the website to alive
+The essence of this project is that it reads configuration scripts from mongodb and applies it to make the website live.
 
-All yo need to do is define the javascripts file and insert it to mongodb.
+All you have to do is define the javascripts file and add it to mongodb.
 
-no need to have a tool to write javascripts files mentioned above.
+There is no need for a tool to write the above mentioned javascripts files.
 
-you can find a lot of example in fms-tcma repository wich represent the live site of Turkis Capital Market Associtaion.
+You can find many examples in the fms-tcma repository, which represents the Turkis Capital Market Associtaion live site.
 
-All parameers you set in configuration files wil be explaned in the repository.
+All parameters you set in configuration files will be explained in this repository.
 
-But I plan to prepare a react tool to satisfy fms users. 
-
+However, I plan to create a response tool that will satisfy fms users.
