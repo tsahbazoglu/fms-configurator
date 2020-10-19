@@ -17,12 +17,12 @@
                     "properties":{
                         "permit":{
                            "type":"array",
-                            "items":{
+                           "items":{
                                "type":"string"
-                            }
+                           }
                         },
                         "func":{
-                            "type":"string"                        
+                           "type":"string"                        
                         }
                     }
                 },
