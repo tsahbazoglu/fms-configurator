@@ -23,6 +23,9 @@
                         },
                         "func":{
                            "type":"string"                        
+                        },
+                        "shoot":{
+                            type:"boolean"
                         }
                     }
                 },
