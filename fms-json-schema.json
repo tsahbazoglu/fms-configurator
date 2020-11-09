@@ -30,19 +30,89 @@
                     }
                 },
                 "delete": {
-                    "type": "string"
+                    "type": "object",
+                    "properties":{
+                        "permit":{
+                           "type":"array",
+                           "items":{
+                               "type":"string"
+                           }
+                        },
+                        "func":{
+                           "type":"string"                        
+                        },
+                        "shoot":{
+                            "type":"boolean"
+                        }
+                    }
                 },
                 "download": {
-                    "type": "string"
+                    "type": "object",
+                    "properties":{
+                        "permit":{
+                           "type":"array",
+                           "items":{
+                               "type":"string"
+                           }
+                        },
+                        "func":{
+                           "type":"string"                        
+                        },
+                        "shoot":{
+                            "type":"boolean"
+                        }
+                    }
                 },
                 "read": {
-                    "type": "string"
+                    "type": "object",
+                    "properties":{
+                        "permit":{
+                           "type":"array",
+                           "items":{
+                               "type":"string"
+                           }
+                        },
+                        "func":{
+                           "type":"string"                        
+                        },
+                        "shoot":{
+                            "type":"boolean"
+                        }
+                    }
                 },
                 "save": {
-                    "type": "string"
+                    "type": "object",
+                    "properties":{
+                        "permit":{
+                           "type":"array",
+                           "items":{
+                               "type":"string"
+                           }
+                        },
+                        "func":{
+                           "type":"string"                        
+                        },
+                        "shoot":{
+                            "type":"boolean"
+                        }
+                    }
                 },
                 "upload": {
-                    "type": "string"
+                    "type": "object",
+                    "properties":{
+                        "permit":{
+                           "type":"array",
+                           "items":{
+                               "type":"string"
+                           }
+                        },
+                        "func":{
+                           "type":"string"                        
+                        },
+                        "shoot":{
+                            "type":"boolean"
+                        }
+                    }
                 }
             }
         }
