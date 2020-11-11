@@ -64,7 +64,10 @@
     },
     "properties": {
         "fields": {
-            "$ref": "#/definitions/field"
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/field"
+            }
         },
         "schemaVersion":{
             "type":"string"
