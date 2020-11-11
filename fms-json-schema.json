@@ -19,10 +19,14 @@
                     "type": "string"
                 },
                 "order": {
-                    "type": "number"
+                    "type": "number",
+                    "minimum":10,
+                    "maximum":1000
                 },
                 "reportOrder": {
-                    "type": "number"
+                    "type": "number",
+                    "minimum":10,
+                    "maximum":1000
                 },
                 "rendered":{
                     "type":"boolean"
