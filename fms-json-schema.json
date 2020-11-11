@@ -19,7 +19,7 @@
                     "type": "string"
                 },
                 "converter": {
-                    "type": "string"
+                    "type": "string",
                     "enum":["SelectOneStringConverter"]
                 },
                 "items": {
