@@ -35,7 +35,16 @@
                 },
                 "quickFilter":{
                     "type":"boolean"
-                },            
+                },  
+                "roleCheck":{
+                    "type":"boolean"
+                },  
+                "money":{
+                    "type":"boolean"
+                },  
+                "observable":{
+                    "type":"boolean"
+                },  
                 "componentType":{
                     "type":"string",
                     "enum":["inputText","inputDate","selectOneMenu"]
@@ -43,7 +52,13 @@
                 "valueType":{
                     "type":"string",
                     "enum":["java.lang.String","java.lang.Integer"]
-                }
+                },
+                "accesscontrol": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }                
             }
         }
     },
