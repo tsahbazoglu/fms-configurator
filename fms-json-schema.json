@@ -21,6 +21,9 @@
                 "order": {
                     "type": "number"
                 },
+                "reportOrder": {
+                    "type": "number"
+                },
                 "rendered":{
                     "type":"boolean"
                 },
