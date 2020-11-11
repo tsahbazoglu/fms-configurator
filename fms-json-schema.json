@@ -67,12 +67,6 @@
         }
     },
     "properties": {
-        "fields": {
-            "type": "array",
-            "items": {
-                "$ref": "#/definitions/field"
-            }
-        },
         "schemaVersion":{
             "type":"string"
         },
@@ -222,6 +216,12 @@
                         }
                     }
                 }
+            }
+        },
+        "fields": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/field"
             }
         }
     }
