@@ -70,13 +70,22 @@
         "schemaVersion": {
             "type": "string"
         },
+        "key": {
+            "type": "string"
+        },
         "db": {
             "type": "string"
         },
         "collection": {
             "type": "string"
         },
+        "versionCollection": {
+            "type": "string"
+        },
         "userConstantNote": {
+            "type": "string"
+        },
+        "userNote": {
             "type": "string"
         },
         "menuOrder": {
@@ -106,6 +115,12 @@
             "type": "string"
         },
         "accesscontrol": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },  
+        "upperNodes": {
             "type": "array",
             "items": {
                 "type": "string"
