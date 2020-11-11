@@ -16,7 +16,9 @@
         }
     },
     "properties": {
-        "fields": "$ref": "#/definitions/field"
+        "fields": {
+            "$ref": "#/definitions/field"
+        },
         "schemaVersion":{
             "type":"string"
         },
