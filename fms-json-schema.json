@@ -6,6 +6,12 @@
         "field": {
             "type": "object",
             "properties": {
+                "key": {
+                    "type": "string"
+                },
+                "field": {
+                    "type": "string"
+                },
                 "name": {
                     "type": "string"
                 },
