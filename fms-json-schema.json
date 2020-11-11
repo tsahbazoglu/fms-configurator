@@ -18,6 +18,16 @@
                 "shortName": {
                     "type": "string"
                 },
+                "converter": {
+                    "type": "string"
+                    "enum":["SelectOneStringConverter"]
+                },
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
                 "order": {
                     "type": "number",
                     "minimum": 10,
@@ -51,7 +61,7 @@
                 },  
                 "componentType": {
                     "type": "string",
-                    "enum": ["inputText", "inputDate", "selectOneMenu"]
+                    "enum": ["inputText", "inputTextarea", "inputDate", "selectOneMenu"]
                 },
                 "valueType": {
                     "type": "string",
