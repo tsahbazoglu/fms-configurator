@@ -14,6 +14,23 @@
                 },
                 "order": {
                     "type": "number"
+                },
+                "rendered":{
+                    "type":"boolean"
+                },
+                "readonly":{
+                    "type":"boolean"
+                },
+                "quickFilter":{
+                    "type":"boolean"
+                },            
+                "componentType":{
+                    "type":"string",
+                    "enum":["inputText","inputDate","selectOneMenu"]
+                },
+                "valueType":{
+                    "type":"string",
+                    "enum":["java.lang.String","java.lang.Integer"]
                 }
             }
         }
