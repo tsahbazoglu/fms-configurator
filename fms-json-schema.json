@@ -11,7 +11,10 @@
                 },
                 "shortName": {
                     "type": "string"
-                }
+                },
+                "order": {
+                    "type": "number"
+                },
             }
         }
     },
