@@ -28,10 +28,12 @@
             "type":"string"
         },
         "dimension":{
-            "type":"number"
+            "type":"number",
+            "enum":[1,2,3]
         },
         "type":{
-            "type":"string"
+            "type":"string",
+            "enum":["node","website"]
         },
         "defaultSortField":{
             "type":"string"
