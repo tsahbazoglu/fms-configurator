@@ -109,7 +109,12 @@
                             "type":"string"
                         },
                         "query":{
-                            "type":"string"
+                            "type":"object",
+                            "properties":{
+                                "forms":{
+                                    "type":"string"
+                                }
+                            }
                         },
                         "v":{
                             "type":"array",
