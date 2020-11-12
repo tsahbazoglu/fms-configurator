@@ -26,6 +26,21 @@
                 }                
             }
         },
+        "query-item":{
+            "type":"object",
+            "properties":{
+                "key":{
+                    "type":"string"                   
+                },
+                "value":{
+                    "type":"string"
+                },
+                "type":{
+                    "type":"string",
+                    "enum":["number","string"]                    
+                }  
+            }
+        },
         "field": {
             "type": "object",
             "properties": {
@@ -109,12 +124,10 @@
                             "type":"string"
                         },
                         "query":{
-                            "type":"object",
-                            "properties":{
-                                "forms":{
-                                    "type":"string"
-                                }
-                            }
+                            "type":"array",
+                            "items":{
+                                "$ref": "#/definitions/query-item"
+                            }  
                         },
                         "v":{
                             "type":"array",
