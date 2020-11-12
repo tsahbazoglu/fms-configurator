@@ -14,6 +14,18 @@
                 }                
             }
         },
+        "view-sort-item":{
+            "type":"object",
+            "properties":{
+                "key":{
+                    "type":"string"                   
+                },
+                "value":{
+                    "type":"number",
+                    "enum":[1,-1]                    
+                }                
+            }
+        },
         "field": {
             "type": "object",
             "properties": {
@@ -57,13 +69,13 @@
                         "v":{
                             "type":"array",
                             "items":{
-                                "type":"string"
+                                "$ref": "#/definitions/view-sort-item"
                             }         
                         },
                         "sort":{
                             "type":"array",
                             "items":{
-                                "type":"string"
+                                "$ref": "#/definitions/view-sort-item"
                             }
                         }                        
                     }
