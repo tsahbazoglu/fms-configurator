@@ -3,6 +3,17 @@
     "type": "object",
     "additionalProperties": false,
     "definitions": {
+        "bson-item":{
+            "type":"object",
+            "properties":{
+                "code":{
+                    "type":"string"                   
+                },
+                "name":{
+                    "type":"string"
+                }                
+            }
+        },
         "field": {
             "type": "object",
             "properties": {
@@ -25,7 +36,7 @@
                 "items-list": {
                     "type": "array",
                     "items": {
-                        "type": "string"
+                        "$ref": "#/definitions/bson-item"
                     }
                 },
                 "items-func": {
@@ -41,13 +52,13 @@
                             "type":"string"
                         },
                         "query":{
-                            "type":"object"
+                            "type":"string"
                         },
                         "v":{
-                            "type":"object"
+                            "type":"string"
                         },
                         "sort":{
-                            "type":"object"
+                            "type":"string"
                         }                        
                     }
                 },
