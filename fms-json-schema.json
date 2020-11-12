@@ -14,7 +14,7 @@
                 }                
             }
         },
-        "view-sort-item":{
+        "sort-item":{
             "type":"object",
             "properties":{
                 "key":{
@@ -132,13 +132,13 @@
                         "v":{
                             "type":"array",
                             "items":{
-                                "$ref": "#/definitions/view-sort-item"
+                                "type": "string"
                             }         
                         },
                         "sort":{
                             "type":"array",
                             "items":{
-                                "$ref": "#/definitions/view-sort-item"
+                                "$ref": "#/definitions/sort-item"
                             }
                         }                        
                     }
