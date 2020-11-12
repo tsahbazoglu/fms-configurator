@@ -43,7 +43,7 @@
                 },
                 "converter": {
                     "type": "string",
-                    "enum":["SelectOneStringConverter"]
+                    "enum":["SelectOneStringConverter","SelectOneObjectIdConverter"]
                 },
                 "items-list": {
                     "type": "array",
