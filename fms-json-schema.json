@@ -97,10 +97,7 @@
         },
         "userNote": {
             "type": "string"
-        },
-        "menuOrder": {
-            "type": "number"
-        },
+        },      
         "form": {
             "type": "string"
         },
@@ -110,6 +107,23 @@
         "forms": {
             "type": "string"
         },
+        "defaultSortField": {
+            "type": "string"
+        },
+        "loginFkField": {
+            "type": "string"
+        },
+        "menuOrder": {
+            "type": "number"
+        },
+        "filter": {
+            "type": "object",
+            "properties": {
+                "forms":{
+                    "type":"string"
+                }
+            }
+        }, 
         "dimension": {
             "type": "number",
             "enum": [1, 2, 3]
@@ -117,13 +131,7 @@
         "type": {
             "type": "string",
             "enum": ["node", "website"]
-        },
-        "defaultSortField": {
-            "type": "string"
-        },
-        "loginFkField": {
-            "type": "string"
-        },
+        },      
         "accesscontrol": {
             "type": "array",
             "items": {
