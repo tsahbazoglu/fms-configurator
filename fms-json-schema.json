@@ -55,10 +55,16 @@
                             "type":"string"
                         },
                         "v":{
-                            "type":"string"
+                            "type":"array",
+                            "items":{
+                                "type":"string"
+                            }         
                         },
                         "sort":{
-                            "type":"string"
+                            "type":"array",
+                            "items":{
+                                "type":"string"
+                            }
                         }                        
                     }
                 },
