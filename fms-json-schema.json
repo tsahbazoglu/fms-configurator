@@ -40,46 +40,7 @@
                 },
                 "shortName": {
                     "type": "string"
-                },
-                "converter": {
-                    "type": "string",
-                    "enum":["SelectOneStringConverter","SelectOneObjectIdConverter"]
-                },
-                "items-list": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/bson-item"
-                    }
-                },
-                "items-func": {
-                    "type": "string",
-                },
-                "items-ref": {
-                    "type": "object",
-                    "properties": {
-                        "db": {
-                           "type":"string"
-                        },
-                        "itemTable":{
-                            "type":"string"
-                        },
-                        "query":{
-                            "type":"string"
-                        },
-                        "v":{
-                            "type":"array",
-                            "items":{
-                                "$ref": "#/definitions/view-sort-item"
-                            }         
-                        },
-                        "sort":{
-                            "type":"array",
-                            "items":{
-                                "$ref": "#/definitions/view-sort-item"
-                            }
-                        }                        
-                    }
-                },
+                },              
                 "order": {
                     "type": "number",
                     "minimum": 10,
@@ -124,7 +85,46 @@
                     "items": {
                         "type": "string"
                     }
-                }                
+                },
+                "converter": {
+                    "type": "string",
+                    "enum":["SelectOneStringConverter", "SelectOneObjectIdConverter"]
+                },
+                "items-list": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/bson-item"
+                    }
+                },
+                "items-func": {
+                    "type": "string",
+                },
+                "items-ref": {
+                    "type": "object",
+                    "properties": {
+                        "db": {
+                           "type":"string"
+                        },
+                        "itemTable":{
+                            "type":"string"
+                        },
+                        "query":{
+                            "type":"string"
+                        },
+                        "v":{
+                            "type":"array",
+                            "items":{
+                                "$ref": "#/definitions/view-sort-item"
+                            }         
+                        },
+                        "sort":{
+                            "type":"array",
+                            "items":{
+                                "$ref": "#/definitions/view-sort-item"
+                            }
+                        }                        
+                    }
+                }
             }
         }
     },
