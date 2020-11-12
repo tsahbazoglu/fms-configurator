@@ -35,7 +35,7 @@
                     "type": "object",
                     "properties": {
                         "db": {
-                            type:"string"
+                           "type":"string"
                         },
                         "itemTable":{
                             "type":"string"
