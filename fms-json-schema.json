@@ -22,10 +22,33 @@
                     "type": "string",
                     "enum":["SelectOneStringConverter"]
                 },
-                "items": {
+                "items-list": {
                     "type": "array",
                     "items": {
                         "type": "string"
+                    }
+                },
+                "items-func": {
+                    "type": "string",
+                },
+                "items-ref": {
+                    "type": "object",
+                    "properties": {
+                        "db": {
+                            type:"string"
+                        },
+                        "itemTable":{
+                            "type":"string"
+                        },
+                        "query":{
+                            "type":"object"
+                        },
+                        "v":{
+                            "type":"object"
+                        },
+                        "sort":{
+                            "type":"object"
+                        }                        
                     }
                 },
                 "order": {
