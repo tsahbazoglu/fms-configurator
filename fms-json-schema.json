@@ -14,6 +14,21 @@
                 }                
             }
         },
+        "view-item":{
+            "type":"object",
+            "properties":{
+                "key":{
+                    "type":"string"                   
+                },
+                "permit":{
+                    "type":"string"                   
+                },
+                "order":{
+                    "type":"number",
+                    "enum":[10,20,30]                    
+                }                
+            }
+        },
         "sort-item":{
             "type":"object",
             "properties":{
@@ -132,7 +147,7 @@
                         "v":{
                             "type":"array",
                             "items":{
-                                "type": "string"
+                                "$ref": "#/definitions/view-item"
                             }         
                         },
                         "sort":{
