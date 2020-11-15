@@ -142,10 +142,18 @@
                             "type":"string"
                         },
                         "query":{
-                            "type":"array",
-                            "items":{
-                                "$ref": "#/definitions/query-item"
-                            }  
+                            "type":"object",
+                            "properties":{
+                                "func":{
+                                    "type":"string"
+                                },
+                                "list":{
+                                    "type":"array",
+                                    "items":{
+                                        "$ref": "#/definitions/query-item"
+                                    }
+                                }                            
+                            }
                         },
                         "v":{
                             "type":"array",
