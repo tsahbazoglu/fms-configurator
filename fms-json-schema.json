@@ -36,12 +36,9 @@
                     "type":"string"                   
                 },
                 "value":{
-                    "type":"string"
-                },
-                "type":{
-                    "type":"string",
-                    "enum":["string","function"]                    
-                }             
+                    "type":"number",
+                    "enum":[1,-1]
+                }            
             }
         },
         "query-item":{
@@ -162,9 +159,17 @@
                             }         
                         },
                         "sort":{
-                            "type":"array",
-                            "items":{
-                                "$ref": "#/definitions/sort-item"
+                            "type":"object",
+                            "properties":{
+                                "func":{
+                                    "type":"string"
+                                },
+                                "list":{
+                                    "type":"array",
+                                    "items":{
+                                        "$ref": "#/definitions/sort-item"
+                                    }
+                                }                            
                             }
                         }                        
                     }
