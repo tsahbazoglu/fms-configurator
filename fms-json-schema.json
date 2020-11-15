@@ -119,59 +119,61 @@
                 "converter": {
                     "type": "string",
                     "enum":["SelectOneStringConverter", "SelectOneObjectIdConverter"]
-                },
-                "items-list": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/bson-item"
-                    }
-                },
-                "items-func": {
-                    "type": "string",
-                },
-                "items-ref": {
-                    "type": "object",
-                    "properties": {
-                        "db": {
-                           "type":"string"
-                        },
-                        "itemTable":{
-                            "type":"string"
-                        },
-                        "query":{
-                            "type":"object",
-                            "properties":{
-                                "func":{
-                                    "type":"string"
-                                },
-                                "list":{
-                                    "type":"array",
-                                    "items":{
-                                        "$ref": "#/definitions/query-item"
-                                    }
-                                }                            
-                            }
-                        },
-                        "v":{
-                            "type":"array",
-                            "items":{
-                                "$ref": "#/definitions/view-item"
-                            }         
-                        },
-                        "sort":{
-                            "type":"object",
-                            "properties":{
-                                "func":{
-                                    "type":"string"
-                                },
-                                "list":{
-                                    "type":"array",
-                                    "items":{
-                                        "$ref": "#/definitions/sort-item"
-                                    }
-                                }                            
-                            }
-                        }                        
+                },          
+                "items":{
+                    "func":{
+                        "type":"string"
+                    },
+                    "list":{
+                        "type":"array",
+                        "items": {
+                            "$ref": "#/definitions/bson-item"
+                        }
+                    },                    
+                    "ref": {
+                        "type": "object",
+                        "properties": {
+                            "db": {
+                                "type":"string"
+                            },
+                            "itemTable":{
+                                "type":"string"
+                            },
+                            "query":{
+                                "type":"object",
+                                "properties":{
+                                    "func":{
+                                        "type":"string"
+                                    },
+                                    "list":{
+                                        "type":"array",
+                                        "items":{
+                                            "$ref": "#/definitions/query-item"
+                                        }
+                                    }                            
+                                }
+                            },
+                            "v":{
+                                "type":"array",
+                                "items":{
+                                    "$ref": "#/definitions/view-item"
+                                }         
+                            },
+                            "sort":{
+                                "type":"object",
+                                "properties":{
+                                    "func":{
+                                        "type":"string"
+                                    },  
+                                    "list":{                                        
+                                        "type":"array",
+                                        "items":{
+                                            "$ref": "#/definitions/sort-item"
+                                        }
+                                    }                            
+                                }
+                            }                        
+                        }
                     }
                 }
             }
