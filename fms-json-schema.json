@@ -3,56 +3,56 @@
     "type": "object",
     "additionalProperties": false,
     "definitions": {
-        "bson-item":{
-            "type":"object",
-            "properties":{
-                "code":{
-                    "type":"string"                   
+        "bson-item": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"                   
                 },
-                "name":{
-                    "type":"string"
+                "name": {
+                    "type": "string"
                 }                
             }
         },
-        "view-item":{
-            "type":"object",
-            "properties":{
-                "key":{
-                    "type":"string"                   
+        "view-item": {
+            "type": "object",
+            "properties": {
+                "key": {
+                    "type": "string"                   
                 },
-                "permit":{
-                    "type":"string"                   
+                "permit": {
+                    "type": "string"                   
                 },
-                "order":{
-                    "type":"number",
-                    "enum":[10,20,30]                    
+                "order": {
+                    "type": "number",
+                    "enum": [10, 20, 30]                    
                 }                
             }
         },
-        "sort-item":{
-            "type":"object",
-            "properties":{
-                "key":{
-                    "type":"string"                   
+        "sort-item": {
+            "type": "object",
+            "properties": {
+                "key": {
+                    "type": "string"                   
                 },
-                "value":{
-                    "type":"number",
-                    "enum":[1,-1]
+                "value": {
+                    "type": "number",
+                    "enum": [1, -1]
                 }            
             }
         },
-        "query-item":{
-            "type":"object",
-            "properties":{
-                "key":{
-                    "type":"string"                   
+        "query-item": {
+            "type": "object",
+            "properties": {
+                "key": {
+                    "type": "string"                   
                 },
-                "value":{
-                    "type":"string"
+                "value": {
+                    "type": "string"
                 },
-                "type":{
-                    "type":"string",
-                    "enum":["number","string"]                    
+                "type": {
+                    "type": "string",
+                    "enum": ["number", "string"]                    
                 }  
             }
         },
@@ -118,61 +118,65 @@
                 },
                 "converter": {
                     "type": "string",
-                    "enum":["SelectOneStringConverter", "SelectOneObjectIdConverter"]
+                    "enum": ["SelectOneStringConverter", "SelectOneObjectIdConverter"]
                 },          
-                "items":{
-                    "func":{
-                        "type":"string"
-                    },
-                    "list":{
-                        "type":"array",
-                        "items": {
-                            "$ref": "#/definitions/bson-item"
-                        }
-                    },                    
-                    "ref": {
-                        "type": "object",
-                        "properties": {
-                            "db": {
-                                "type":"string"
-                            },
-                            "itemTable":{
-                                "type":"string"
-                            },
-                            "query":{
-                                "type":"object",
-                                "properties":{
-                                    "func":{
-                                        "type":"string"
-                                    },
-                                    "list":{
-                                        "type":"array",
-                                        "items":{
-                                            "$ref": "#/definitions/query-item"
-                                        }
-                                    }                            
-                                }
-                            },
-                            "v":{
-                                "type":"array",
-                                "items":{
-                                    "$ref": "#/definitions/view-item"
-                                }         
-                            },
-                            "sort":{
-                                "type":"object",
-                                "properties":{
-                                    "func":{
-                                        "type":"string"
-                                    },  
-                                    "list":{                                        
-                                        "type":"array",
-                                        "items":{
-                                            "$ref": "#/definitions/sort-item"
-                                        }
-                                    }                            
-                                }
-                            }                        
+                "items": {
+                    "type": "object",
+                    "properties": {
+
+                        "ref": {
+                            "type": "object",
+                            "properties": {
+                                "db": {
+                                    "type": "string"
+                                },
+                                "itemTable": {
+                                    "type": "string"
+                                },
+                                "query": {
+                                    "type": "object",
+                                    "properties": {
+                                        "func": {
+                                            "type": "string"
+                                        },
+                                        "list": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/query-item"
+                                            }
+                                        }                            
+                                    }
+                                },
+                                "sort": {
+                                    "type": "object",
+                                    "properties": {
+                                        "func": {
+                                            "type": "string"
+                                        },  
+                                        "list": {                                        
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/sort-item"
+                                            }
+                                        }                            
+                                    }
+                                },
+                                "v": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/view-item"
+                                    }         
+                                }                    
+                            }
+                        },
+                        "func": {
+                            "type": "string"
+                        },
+                        "list": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/bson-item"
+                            }
                         }
                     }
                 }
@@ -222,8 +226,8 @@
         "filter": {
             "type": "object",
             "properties": {
-                "forms":{
-                    "type":"string"
+                "forms": {
+                    "type": "string"
                 }
             }
         }, 
