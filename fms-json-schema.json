@@ -32,13 +32,16 @@
         "sort-item":{
             "type":"object",
             "properties":{
-                "key":{
+               "key":{
                     "type":"string"                   
                 },
                 "value":{
-                    "type":"number",
-                    "enum":[1,-1]                    
-                }                
+                    "type":"string"
+                },
+                "type":{
+                    "type":"string",
+                    "enum":["number","string","function"]                    
+                }             
             }
         },
         "query-item":{
