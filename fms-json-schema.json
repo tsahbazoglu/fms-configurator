@@ -32,7 +32,7 @@
         "sort-item":{
             "type":"object",
             "properties":{
-               "key":{
+                "key":{
                     "type":"string"                   
                 },
                 "value":{
@@ -40,7 +40,7 @@
                 },
                 "type":{
                     "type":"string",
-                    "enum":["number","string","function"]                    
+                    "enum":["string","function"]                    
                 }             
             }
         },
