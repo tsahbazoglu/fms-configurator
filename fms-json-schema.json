@@ -222,14 +222,6 @@
         "menuOrder": {
             "type": "number"
         },
-        "filter": {
-            "type": "object",
-            "properties": {
-                "forms": {
-                    "type": "string"
-                }
-            }
-        }, 
         "dimension": {
             "type": "number",
             "enum": [1, 2, 3]
@@ -238,6 +230,14 @@
             "type": "string",
             "enum": ["node", "website"]
         },  
+        "filter": {
+            "type": "object",
+            "properties": {
+                "forms": {
+                    "type": "string"
+                }
+            }
+        },       
         "myNamedQueries":{
             "type":"object",
             "properties":{
