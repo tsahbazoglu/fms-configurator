@@ -237,7 +237,15 @@
         "type": {
             "type": "string",
             "enum": ["node", "website"]
-        },      
+        },  
+        "myNamedQueries":{
+            "type":"object",
+            "properties":{
+                "overAllCheck":{
+                    "type":"string"
+                }
+            }            
+        },
         "accesscontrol": {
             "type": "array",
             "items": {
