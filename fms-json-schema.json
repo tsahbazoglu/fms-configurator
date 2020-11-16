@@ -104,7 +104,7 @@
                 },  
                 "componentType": {
                     "type": "string",
-                    "enum": ["inputText", "inputTextarea", "inputDate", "selectOneMenu"]
+                    "enum": ["inputText", "inputTextarea", "inputDate", "selectOneMenu", "selectBooleanCheckbox"]
                 },
                 "valueType": {
                     "type": "string",
