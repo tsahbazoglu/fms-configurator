@@ -108,7 +108,7 @@
                 },
                 "valueType": {
                     "type": "string",
-                    "enum": ["java.lang.String", "java.lang.Integer"]
+                    "enum": ["java.lang.String", "java.lang.Integer", "java.lang.Boolean"]
                 },
                 "accesscontrol": {
                     "type": "array",
