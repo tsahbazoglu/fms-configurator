@@ -3,6 +3,18 @@
     "type": "object",
     "additionalProperties": false,
     "definitions": {
+        "dimension-item": {
+            "type": "object",
+            "properties": {
+                "roles": {
+                    "type": "array"                   
+                },
+                "name": {
+                    "value": "number",
+                    "enum":[1,2,3]
+                }                
+            }
+        },
         "bson-item": {
             "type": "object",
             "properties": {
@@ -227,8 +239,19 @@
             "type": "number"
         },
         "dimension": {
-            "type": "number",
-            "enum": [1, 2, 3]
+            "type":"object",
+            "properties":{
+                "list":{
+                    "type":"array",
+                    "items":{
+                        "$ref": "#/definitions/dimension-item"
+                    }
+                },                
+                "default":{
+                    "type": "number",
+                    "enum": [1, 2, 3]
+                }
+            }
         },
         "type": {
             "type": "string",
