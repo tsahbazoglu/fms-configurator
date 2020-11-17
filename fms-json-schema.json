@@ -82,7 +82,8 @@
                     "maximum": 1000
                 },
                 "autoset": {
-                    "type": "string"                                       
+                    "type": "string",
+                    "enum":["fms_code{{login_member_id}}"]
                 },
                 "rendered": {
                     "type": "boolean"
