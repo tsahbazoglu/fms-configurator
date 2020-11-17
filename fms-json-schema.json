@@ -12,8 +12,8 @@
                         "type": "string"
                     }
                 },
-                "name": {
-                    "value": "number",
+                "value": {
+                    "type": "number",
                     "enum":[1,2,3]
                 }                
             }
