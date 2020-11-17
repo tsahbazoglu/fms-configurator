@@ -14,7 +14,7 @@
                 },
                 "value": {
                     "type": "number",
-                    "enum":[1,2,3]
+                    "enum":[0,1,2]
                 }                
             }
         },
@@ -252,7 +252,7 @@
                 },                
                 "value":{
                     "type": "number",
-                    "enum": [1, 2, 3]
+                    "enum": [0, 1, 2]
                 }
             }
         },
