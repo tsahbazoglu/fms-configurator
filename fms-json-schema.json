@@ -24,7 +24,7 @@
                 "shoot": {
                     "type": "boolean"
                 },
-                "workout":{
+                "ref":{
                     "type":"object",
                     "properties":{
                         "db":{
