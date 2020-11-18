@@ -2,22 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "additionalProperties": false,
-    "definitions": {
-        "dimension-item": {
-            "type": "object",
-            "properties": {
-                "roles": {
-                    "type": "array",  
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "value": {
-                    "type": "number",
-                    "enum":[0,1,2]
-                }                
-            }
-        },
+    "definitions": {        
         "bson-item": {
             "type": "object",
             "properties": {
@@ -244,15 +229,23 @@
         "dimension": {
             "type":"object",
             "properties":{
-                "list":{
-                    "type":"array",
+                "page":{
+                    type:"array",
                     "items":{
-                        "$ref": "#/definitions/dimension-item"
+                        "type":"string"
                     }
                 },                
-                "value":{
-                    "type": "number",
-                    "enum": [0, 1, 2]
+                "table":{
+                    type:"array",
+                    "items":{
+                        "type":"string"
+                    }
+                },
+                "grid":{
+                    type:"array",
+                    "items":{
+                        "type":"string"
+                    }
                 }
             }
         },
