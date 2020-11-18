@@ -33,8 +33,19 @@
                         "table":{
                             "type":"string"                        
                         },
-                        "query":{
-                            "type":"string"
+                        "query": {
+                            "type": "object",
+                            "properties": {
+                                "func": {
+                                    "type": "string"
+                                },
+                                "list": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/definitions/query-item"
+                                    }
+                                }                            
+                            }
                         },
                         "check":{
                             "type":"string"
