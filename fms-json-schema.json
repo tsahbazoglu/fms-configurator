@@ -17,6 +17,23 @@
                 },
                 "shoot": {
                     "type": "boolean"
+                },
+                "workout":{
+                    "type":"object",
+                    "properties":{
+                        "db":{
+                            "type":"string"
+                        },
+                        "table":{
+                            "type":"string"                        
+                        },
+                        "query":{
+                            "type":"string"
+                        },
+                        "check":{
+                            "type":"string"
+                        }                        
+                    }                    
                 }
             }
         },
@@ -300,89 +317,19 @@
                     "$ref": "#/definitions/action"
                 },
                 "delete": {
-                    "type": "object",
-                    "properties": {
-                        "permit": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
-                            }
-                        },
-                        "func": {
-                            "type": "string"                        
-                        },
-                        "shoot": {
-                            "type": "boolean"
-                        }
-                    }
+                    "$ref": "#/definitions/action"
                 },
                 "download": {
-                    "type": "object",
-                    "properties": {
-                        "permit": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
-                            }
-                        },
-                        "func": {
-                            "type": "string"                        
-                        },
-                        "shoot": {
-                            "type": "boolean"
-                        }
-                    }
+                    "$ref": "#/definitions/action"
                 },
                 "read": {
-                    "type": "object",
-                    "properties": {
-                        "permit": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
-                            }
-                        },
-                        "func": {
-                            "type": "string"                        
-                        },
-                        "shoot": {
-                            "type": "boolean"
-                        }
-                    }
+                    "$ref": "#/definitions/action"
                 },
                 "save": {
-                    "type": "object",
-                    "properties": {
-                        "permit": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
-                            }
-                        },
-                        "func": {
-                            "type": "string"                        
-                        },
-                        "shoot": {
-                            "type": "boolean"
-                        }
-                    }
+                    "$ref": "#/definitions/action"
                 },
                 "upload": {
-                    "type": "object",
-                    "properties": {
-                        "permit": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
-                            }
-                        },
-                        "func": {
-                            "type": "string"                        
-                        },
-                        "shoot": {
-                            "type": "boolean"
-                        }
-                    }
+                    "$ref": "#/definitions/action"
                 }
             }
         },
