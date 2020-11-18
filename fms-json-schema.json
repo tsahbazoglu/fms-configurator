@@ -229,24 +229,22 @@
         "dimension": {
             "type":"object",
             "properties":{
-                "page":{
-                    type:"array",
-                    "items":{
-                        "type":"string"
-                    }
-                },                
-                "table":{
-                    type:"array",
-                    "items":{
-                        "type":"string"
-                    }
-                },
-                "grid":{
-                    type:"array",
-                    "items":{
-                        "type":"string"
-                    }
-                }
+                "list":"array",
+                "items":{
+                    "type":"object",
+                    "properties":{
+                        "roles":{
+                            "type":"array",
+                            "items":{
+                                "type":"string"                                
+                            }
+                        },
+                        "value":{
+                            "type":"string",
+                            "enum":["page","table","grid"]                            
+                        }
+                    }                    
+                } 
             }
         },
         "type": {
