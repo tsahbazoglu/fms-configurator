@@ -12,6 +12,12 @@
                         "type": "string"
                     }
                 },
+                "block": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
                 "func": {
                     "type": "string"                        
                 },
