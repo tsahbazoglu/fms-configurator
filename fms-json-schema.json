@@ -278,22 +278,31 @@
             "type": "number"
         },
         "dimension": {
-            "type":"array",
-            "items":{
-                "type":"object",
-                "properties":{
-                    "roles":{
-                        "type":"array",
-                        "items":{
-                            "type":"string"                                
+            "type":"object",
+            "properties":{
+                "value":{
+                    "type":"string",
+                    "enum":["page", "table", "grid"]                            
+                },
+                "list":{
+                    "type":"array",
+                    "items":{
+                        "type":"object",
+                        "properties":{
+                            "roles":{
+                                "type":"array",
+                                "items":{
+                                    "type":"string"                                
+                                }
+                            },
+                            "value":{
+                                "type":"string",    
+                                "enum":["page", "table", "grid"]                            
+                            }
                         }
-                    },
-                    "value":{
-                        "type":"string",    
-                        "enum":["page", "table", "grid"]                            
                     }
                 }
-            } 
+            }          
          },
         "type": {
             "type": "string",
