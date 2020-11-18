@@ -2,7 +2,24 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "additionalProperties": false,
-    "definitions": {        
+    "definitions": {
+        "action": {
+            "type": "object",
+            "properties": {
+                "permit": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "func": {
+                    "type": "string"                        
+                },
+                "shoot": {
+                    "type": "boolean"
+                }
+            }
+        },
         "bson-item": {
             "type": "object",
             "properties": {
@@ -280,21 +297,7 @@
             "type": "object",
             "properties": {
                 "create": {
-                    "type": "object",
-                    "properties": {
-                        "permit": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
-                            }
-                        },
-                        "func": {
-                            "type": "string"                        
-                        },
-                        "shoot": {
-                            "type": "boolean"
-                        }
-                    }
+                    "$ref": "#/definitions/action"
                 },
                 "delete": {
                     "type": "object",
