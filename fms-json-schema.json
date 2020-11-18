@@ -227,26 +227,23 @@
             "type": "number"
         },
         "dimension": {
-            "type":"object",
-            "properties":{
-                "list":"array",
-                "items":{
-                    "type":"object",
-                    "properties":{
-                        "roles":{
-                            "type":"array",
-                            "items":{
-                                "type":"string"                                
-                            }
-                        },
-                        "value":{
-                            "type":"string",
-                            "enum":["page","table","grid"]                            
+            "type":"array",
+            "items":{
+                "type":"object",
+                "properties":{
+                    "roles":{
+                        "type":"array",
+                        "items":{
+                            "type":"string"                                
                         }
-                    }                    
-                } 
-            }
-        },
+                    },
+                    "value":{
+                        "type":"string",    
+                        "enum":["page", "table", "grid"]                            
+                    }
+                }
+            } 
+         },
         "type": {
             "type": "string",
             "enum": ["node", "website"]
