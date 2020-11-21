@@ -97,6 +97,29 @@
             "properties": {
                 "key": {
                     "type": "string"                   
+                },                
+                "fms-value": {
+                    "type": "string"
+                },
+                "string-value": {
+                    "type": "string"
+                },
+                "ref-value": {
+                    "type": "object",
+                    "properties":{
+                        "db":{
+                            "type": "string"
+                        },
+                        "itemTable":{
+                            "type": "string"
+                        },
+                        "query":{
+                            "type":"array"
+                        },
+                        "projection": {
+                            "type": "string"
+                        }
+                    }
                 },
                 "value": {
                     "type": "string"
