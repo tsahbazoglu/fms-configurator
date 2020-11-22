@@ -104,6 +104,9 @@
                 "string-value": {
                     "type": "string"
                 },
+                "number-value": {
+                    "type": "number"
+                },
                 "ref-value": {
                     "type": "object",
                     "properties":{
