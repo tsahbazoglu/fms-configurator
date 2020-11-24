@@ -99,7 +99,8 @@
                     "type": "string"                   
                 },                
                 "fms-value": {
-                    "type": "string"
+                    "type": "string",
+                    "enum": ["fms_code{{filter_member}}", "fms_code{{filter_period}}", "fms_code{{filter_template}}"]
                 },
                 "string-value": {
                     "type": "string"
