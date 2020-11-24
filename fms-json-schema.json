@@ -364,7 +364,7 @@
                                 "properties": {
                                     "func": {
                                         "type": "string"
-                                    }
+                                    },
                                     "list": {
                                         "type": "array",
                                         "items":{
