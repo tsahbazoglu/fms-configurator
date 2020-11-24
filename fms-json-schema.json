@@ -24,14 +24,14 @@
                 "shoot": {
                     "type": "boolean"
                 },
-                "ref":{
-                    "type":"object",
-                    "properties":{
-                        "db":{
-                            "type":"string"
+                "ref": {
+                    "type": "object",
+                    "properties": {
+                        "db": {
+                            "type": "string"
                         },
-                        "table":{
-                            "type":"string"                        
+                        "table": {
+                            "type": "string"                        
                         },
                         "query": {
                             "type": "object",
@@ -47,8 +47,8 @@
                                 }                            
                             }
                         },
-                        "check":{
-                            "type":"string"
+                        "check": {
+                            "type": "string"
                         }                        
                     }                    
                 }
@@ -109,15 +109,15 @@
                 },
                 "ref-value": {
                     "type": "object",
-                    "properties":{
-                        "db":{
+                    "properties": {
+                        "db": {
                             "type": "string"
                         },
-                        "itemTable":{
+                        "itemTable": {
                             "type": "string"
                         },
-                        "query":{
-                            "type":"array"
+                        "query": {
+                            "type": "array"
                         },
                         "projection": {
                             "type": "string"
@@ -160,7 +160,7 @@
                 },
                 "autoset": {
                     "type": "string",
-                    "enum":["fms_code{{login_member_id}}"]
+                    "enum": ["fms_code{{login_member_id}}"]
                 },
                 "rendered": {
                     "type": "boolean"
@@ -304,32 +304,32 @@
             "type": "number"
         },
         "dimension": {
-            "type":"object",
-            "properties":{
-                "value":{
-                    "type":"string",
-                    "enum":["page", "table", "grid"]                            
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "string",
+                    "enum": ["page", "table", "grid"]                            
                 },
-                "list":{
-                    "type":"array",
-                    "items":{
-                        "type":"object",
-                        "properties":{
-                            "roles":{
-                                "type":"array",
-                                "items":{
-                                    "type":"string"                                
+                "list": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "roles": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"                                
                                 }
                             },
-                            "value":{
-                                "type":"string",    
-                                "enum":["page", "table", "grid"]                            
+                            "value": {
+                                "type": "string",    
+                                "enum": ["page", "table", "grid"]                            
                             }
                         }
                     }
                 }
             }          
-         },
+        },
         "type": {
             "type": "string",
             "enum": ["node", "website"]
@@ -342,33 +342,35 @@
                 }
             }
         },       
-        "myNamedQueries":{
-            "type":"object",
-            "properties":{
-                "overAllCheck":{
-                    "type":"string"
+        "myNamedQueries": {
+            "type": "object",
+            "properties": {
+                "overAllCheck": {
+                    "type": "string"
                 },
-                "include":{
-                    "type":"array",
-                    "items":{
-                        "type":"object",
-                        "properties":{
-                            "roles":{
-                                "type":"array",
-                                "items":"string"
+                "include": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "roles": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }   
                             },
-                            "query":{
-                                "type":"object",
-                                "properties":{
-                                    "func":"string",
-                                    "list":{
-                                        "type":"array",
+                            "query": {
+                                "type": "object",
+                                "properties": {
+                                    "func": "string",
+                                    "list": {
+                                        "type": "array",
                                         "$ref": "#/definitions/query-item"
                                     }
                                 }                                                          
                             },
-                            "priority":{
-                                "type":"number"
+                            "priority": {
+                                "type": "number"
                             }
                         }
                     }
