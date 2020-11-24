@@ -365,7 +365,9 @@
                                     "func": "string",
                                     "list": {
                                         "type": "array",
-                                        "$ref": "#/definitions/query-item"
+                                        "items":{
+                                            "$ref": "#/definitions/query-item"
+                                        }                                     
                                     }
                                 }                                                          
                             },
