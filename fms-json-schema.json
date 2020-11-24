@@ -362,7 +362,9 @@
                             "query": {
                                 "type": "object",
                                 "properties": {
-                                    "func": "string",
+                                    "func": {
+                                        "type": "string"
+                                    }
                                     "list": {
                                         "type": "array",
                                         "items":{
