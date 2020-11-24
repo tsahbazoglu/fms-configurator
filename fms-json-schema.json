@@ -100,7 +100,16 @@
                 },                
                 "fms-value": {
                     "type": "string",
-                    "enum": ["fms_code{{login_member_id}}", "fms_code{{login_member_type}}", "fms_code{{filter_member}}", "fms_code{{filter_period}}", "fms_code{{filter_template}}"]
+                    "enum": [
+                        "fms_code{{login_member_id}}",
+                        "fms_code{{login_member_type}}",
+                        "fms_code{{filter_member}}",
+                        "fms_code{{filter_period}}",
+                        "fms_code{{filter_template}}",
+                        "fms_code{{server_ip}}",
+                        "fms_code{{server_date}}"
+                        "fms_code{{server_lang}}"
+                    ]
                 },
                 "string-value": {
                     "type": "string"
