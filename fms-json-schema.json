@@ -347,6 +347,31 @@
             "properties":{
                 "overAllCheck":{
                     "type":"string"
+                },
+                "include":{
+                    "type":"array",
+                    "items":{
+                        "type":"object",
+                        "properties":{
+                            "roles":{
+                                "type":"array",
+                                "items":"string"
+                            },
+                            "query":{
+                                "type":"object",
+                                "properties":{
+                                    "func":"string",
+                                    "list":{
+                                        "type":"array",
+                                        "$ref": "#/definitions/query-item"
+                                    }
+                                }                                                          
+                            },
+                            "priority":{
+                                "type":"number"
+                            }
+                        }
+                    }
                 }
             }            
         },
