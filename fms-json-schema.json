@@ -107,7 +107,7 @@
                         "fms_code{{filter_period}}",
                         "fms_code{{filter_template}}",
                         "fms_code{{server_ip}}",
-                        "fms_code{{server_date}}"
+                        "fms_code{{server_date}}",
                         "fms_code{{server_lang}}"
                     ]
                 },
