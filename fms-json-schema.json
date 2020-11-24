@@ -130,7 +130,7 @@
                 },
                 "type": {
                     "type": "string",
-                    "enum": ["number", "string", "in"]                    
+                    "enum": ["number", "string", "in", "ne"]                    
                 }  
             }
         },
