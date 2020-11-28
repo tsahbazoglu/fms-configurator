@@ -289,8 +289,30 @@
         "versionCollection": {
             "type": "string"
         },
-        "userConstantNote": {
-            "type": "string"
+        "user-constant-note": {
+            "type": "object",
+            "properties": {
+                "func": {
+                    "type": "string"
+                },
+                "list": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "roles": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            } 
         },
         "userNote": {
             "type": "string"
@@ -313,29 +335,29 @@
         "menuOrder": {
             "type": "number"
         },
-        "calculate-ref":{
-            "type":"object",
-            "properties":{
-                "func":{
-                    "type":"string"
+        "calculate-ref": {
+            "type": "object",
+            "properties": {
+                "func": {
+                    "type": "string"
                 },
-                "doc":{
-                    "type":"object",
-                    "properties":{
-                        "cache":{
-                            "type":"boolean"
+                "doc": {
+                    "type": "object",
+                    "properties": {
+                        "cache": {
+                            "type": "boolean"
                         },
-                        "db":{
-                            "type":"string"
+                        "db": {
+                            "type": "string"
                         },
-                        "collection":{
-                            "type":"string"
+                        "collection": {
+                            "type": "string"
                         },
-                        "query":{
-                            "type":"array",
-                            "items":{
-                                "func":{
-                                    "type":"string"
+                        "query": {
+                            "type": "array",
+                            "items": {
+                                "func": {
+                                    "type": "string"
                                 }
                             }
                         }
@@ -407,7 +429,7 @@
                                     },
                                     "list": {
                                         "type": "array",
-                                        "items":{
+                                        "items": {
                                             "$ref": "#/definitions/query-item"
                                         }                                     
                                     }
