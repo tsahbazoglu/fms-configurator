@@ -295,6 +295,9 @@
                 "func": {
                     "type": "string"
                 },
+                "value": {
+                    "type": "string"
+                },
                 "list": {
                     "type": "array",
                     "items": {
