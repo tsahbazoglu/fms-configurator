@@ -296,7 +296,14 @@
                     "type": "string"
                 },
                 "value": {
-                    "type": "string"
+                    "type": "array",
+                    "items":{
+                       "type": "string"
+                    }  
+                },
+                "list-check-strategy": {
+                    "type": "string",
+                    "enum": ["oneof","all"]
                 },
                 "list": {
                     "type": "array",
@@ -310,7 +317,10 @@
                                 }
                             },
                             "value": {
-                                "type": "string"
+                                "type": "array",
+                                "items":{
+                                    "type": "string"
+                                }  
                             }
                         }
                     }
