@@ -321,6 +321,10 @@
                                 "items":{
                                     "type": "string"
                                 }  
+                            },
+                            "priority-order": {
+                                "type": "number",
+                                "enum": [10,20,30,40,50] 
                             }
                         }
                     }
