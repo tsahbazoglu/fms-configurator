@@ -2,14 +2,14 @@
 
 FMS project is based on LCNC (Low Code No Code) design approach
 
-The essence of this project is that it reads configuration scripts from mongodb and applies it to make the website live.
+The essence of this project is that it reads configuration json files from mongodb and applies it to make the website live.
 
-All you have to do is define the javascripts file and add it to mongodb.
+All you have to do is define the json files and add it to mongodb.
 
-There is no need for a tool to write the above mentioned javascripts files.
+There is no need for a tool to write the above mentioned files based on https://json-schema.org standards.
 
-You can find many examples in the fms-tcma repository, which represents the Turkis Capital Market Associtaion live site.
+You can find many examples in the https://github.com/tsahbazoglu/fms-tcma repository, which represents the Turkis Capital Market Associtaion live site.
 
 All parameters you set in configuration files will be explained in this repository.
 
-However, I plan to create a response tool that will satisfy fms users.
+However, one of my friend Cihan Coşgun plans to create a web based tool that will satisfy fms users.
