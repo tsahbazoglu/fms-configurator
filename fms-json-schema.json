@@ -51,6 +51,81 @@
                             "type": "string"
                         }                        
                     }                    
+                },
+                "action": {
+                    "type": "object",
+                    "properties": {
+                        "db": {
+                            "type": "string"
+                        },
+                        "func": {
+                            "type": "string"
+                        },
+                        "registred-func-name": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "gui": {
+                    "type": "object",
+                    "properties": {
+                        "x": {
+                            "type": "number"
+                        },
+                        "y": {
+                            "type": "number"
+                        },
+                        "component": {
+                            "type": "string"
+                        },
+                        "caption": {
+                            "type": "string"
+                        },
+                        "trigger": {
+                            "type": "string"
+                        },
+                        "successMessage": {
+                            "type": "string"
+                        },
+                        "failMessage": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "enable-events": {
+                    "type": "object",
+                    "properties": {
+                        "value": {
+                            "type": "boolean"
+                        },
+                        "func": {
+                            "type": "string"
+                        },
+                        "list": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "db": {
+                                        "type": "string"
+                                    },
+                                    "table": {
+                                        "type": "string"
+                                    },
+                                    "query": {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/definitions/query-item"
+                                        }
+                                    },
+                                    "condition": {
+                                        "type": "string",
+                                        "enum": ["exist"]
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         },
@@ -297,13 +372,13 @@
                 },
                 "value": {
                     "type": "array",
-                    "items":{
-                       "type": "string"
+                    "items": {
+                        "type": "string"
                     }  
                 },
                 "list-check-strategy": {
                     "type": "string",
-                    "enum": ["oneof","all"]
+                    "enum": ["oneof", "all"]
                 },
                 "list": {
                     "type": "array",
@@ -318,13 +393,13 @@
                             },
                             "value": {
                                 "type": "array",
-                                "items":{
+                                "items": {
                                     "type": "string"
                                 }  
                             },
                             "priority-order": {
                                 "type": "number",
-                                "enum": [10,20,30,40,50] 
+                                "enum": [10, 20, 30, 40, 50] 
                             }
                         }
                     }
@@ -470,6 +545,20 @@
             "type": "array",
             "items": {
                 "type": "string"
+            }
+        },
+        "registred-functions": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "key": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "string"
+                    }
+                }
             }
         },
         "actions": {
