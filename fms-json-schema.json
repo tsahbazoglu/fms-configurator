@@ -271,9 +271,15 @@
                 "defaultValue":{
                     "type": "object",
                     "properties": {
-                       "string-value": "string",
-                       "number-value": "number",
-                       "func-value": "string"
+                       "string-value": {
+                           "type": "string"
+                        },
+                       "number-value": {
+                           "type": "number"
+                       },
+                       "func-value": {
+                           "type": "string"
+                       }
                     }
                 },
                 "componentType": {
