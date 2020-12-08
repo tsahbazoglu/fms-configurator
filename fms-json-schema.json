@@ -248,7 +248,15 @@
                     "enum": ["fms_code{{login_member_id}}"]
                 },
                 "rendered": {
-                    "type": "boolean"
+                    "type": "object",
+                    "properties":{
+                        "boolean-value":{  
+                            "type": "boolean"
+                        },
+                        "func-value": {
+                            "type": "string"
+                        }
+                    } 
                 },
                 "reportRendered": {
                     "type": "boolean"
