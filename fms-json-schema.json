@@ -422,7 +422,10 @@
         },
         "userNote": {
             "type": "string"
-        },      
+        }, 
+        "funcNote": {
+            "type": "string"
+        },     
         "form": {
             "type": "string"
         },
