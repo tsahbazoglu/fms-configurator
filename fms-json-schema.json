@@ -3,6 +3,17 @@
     "type": "object",
     "additionalProperties": false,
     "definitions": {
+        "event-item":{
+            "type": "object",
+            "properties": {
+                "db": {
+                    "type": "string"
+                },
+                "jsFunction": {
+                    "type": "string"
+                }
+            }
+        },
         "action": {
             "type": "object",
             "properties": {
@@ -233,6 +244,12 @@
                 "shortName": {
                     "type": "string"
                 },              
+                "labelStyle": {
+                    "type": "string"
+                },              
+                "style": {
+                    "type": "string"
+                },              
                 "order": {
                     "type": "number",
                     "minimum": 10,
@@ -258,7 +275,25 @@
                         }
                     } 
                 },
+                "shouldCheckNegative": {
+                    "type": "boolean"
+                },
+                "maxValue": {
+                    "type": "number"
+                },
+                "minFractationDigits": {
+                    "type": "number"
+                },
+                "maxFractationDigits": {
+                    "type": "number"
+                },
                 "reportRendered": {
+                    "type": "boolean"
+                },
+                "required": {
+                    "type": "boolean"
+                },
+                "trequired": {
                     "type": "boolean"
                 },
                 "readonly": {
@@ -273,6 +308,18 @@
                 "money": {
                     "type": "boolean"
                 },  
+                "calculated": {
+                    "type": "boolean"
+                },
+                "calculateOnListView": {
+                    "type": "boolean"
+                },
+                "calculateOnPost": {
+                    "type": "boolean"
+                },
+                "calculateOnSave": {
+                    "type": "boolean"
+                },
                 "observable": {
                     "type": "boolean"
                 },  
@@ -291,6 +338,16 @@
                     "items": {
                          "type": "string"
                     }
+                }, 
+                "calculate": {
+                    "type": "string",
+                }, 
+                "calculateOnClient": {
+                    "type": "string",
+                }, 
+                "calculateEngine": {
+                    "type": "string",
+                    "enum": "clientSideJS"
                 }, 
                 "defaultValue":{
                     "type": "object",
@@ -312,7 +369,7 @@
                 },
                 "valueType": {
                     "type": "string",
-                    "enum": ["java.lang.String", "java.lang.Integer", "java.lang.Boolean"]
+                    "enum": ["java.lang.String", "java.lang.Integer", "java.lang.Double", "java.lang.Boolean"]
                 },
                 "accesscontrol": {
                     "type": "array",
@@ -320,10 +377,24 @@
                         "type": "string"
                     }
                 },
+                "calcCrudKeyList": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
                 "converter": {
                     "type": "string",
-                    "enum": ["SelectOneStringConverter", "SelectOneObjectIdConverter"]
-                },          
+                    "enum": ["SelectOneStringConverter", "SelectOneObjectIdConverter", "JsFunctionConverter"]
+                },      
+                "converterFormat": {
+                    "type": "string",
+                    "enum": ["##.###"]
+                },  
+                "converterInstance": {
+                    "type": "string",
+                    "enum": ["number"]
+                }, 
                 "items": {
                     "type": "object",
                     "properties": {
@@ -601,6 +672,15 @@
                     }
                 }
             }
+        },
+        "eventPostSave":{
+            "$ref": "#/definitions/event-item"
+        },
+        "eventPreSave":{
+            "$ref": "#/definitions/event-item"
+        },
+        "eventPostDelete":{
+            "$ref": "#/definitions/event-item"
         },
         "actions": {
             "type": "object",
