@@ -47,6 +47,9 @@
                         "query": {
                             "type": "object",
                             "properties": {
+                                "db": {
+                                    "type": "string"
+                                },
                                 "func": {
                                     "type": "string"
                                 },
@@ -59,7 +62,8 @@
                             }
                         },
                         "check": {
-                            "type": "string"
+                            "type": "string",
+                            "enum":["existence","non-existance"]
                         }                        
                     }                    
                 },
@@ -103,11 +107,14 @@
                         }
                     }
                 },
-                "enable-events": {
+                "event-enable": {
                     "type": "object",
                     "properties": {
                         "value": {
                             "type": "boolean"
+                        },
+                        "db": {
+                            "type": "string"
                         },
                         "func": {
                             "type": "string"
@@ -129,9 +136,9 @@
                                             "$ref": "#/definitions/query-item"
                                         }
                                     },
-                                    "condition": {
+                                    "check": {
                                         "type": "string",
-                                        "enum": ["exist"]
+                                        "enum":["existence","non-existance"]
                                     }
                                 }
                             }
