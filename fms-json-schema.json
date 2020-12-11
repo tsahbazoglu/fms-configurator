@@ -3,7 +3,7 @@
     "type": "object",
     "additionalProperties": false,
     "definitions": {
-        "event-item":{
+        "event-item": {
             "type": "object",
             "properties": {
                 "db": {
@@ -63,7 +63,7 @@
                         },
                         "check": {
                             "type": "string",
-                            "enum":["existence","non-existance"]
+                            "enum": ["existence", "non-existance"]
                         }                        
                     }                    
                 },
@@ -78,6 +78,36 @@
                         },
                         "registred-func-name": {
                             "type": "string"
+                        },
+                        "list": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "db": {
+                                        "type": "string"
+                                    },
+                                    "table": {
+                                        "type": "string"
+                                    },
+                                    "filter": {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/definitions/query-item"
+                                        }
+                                    },
+                                    "set": {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/definitions/query-item"
+                                        }
+                                    },
+                                    "op": {
+                                        "type": "string",
+                                        "enum": ["upsert", "update", "insert"]
+                                    }
+                                }
+                            }
                         }
                     }
                 },
@@ -138,7 +168,7 @@
                                     },
                                     "check": {
                                         "type": "string",
-                                        "enum":["existence","non-existance"]
+                                        "enum": ["existence", "non-existance"]
                                     }
                                 }
                             }
@@ -273,8 +303,8 @@
                 },
                 "rendered": {
                     "type": "object",
-                    "properties":{
-                        "boolean-value":{  
+                    "properties": {
+                        "boolean-value": {  
                             "type": "boolean"
                         },
                         "func-value": {
@@ -343,31 +373,31 @@
                 "ajax_effected_keys": {
                     "type": "array",
                     "items": {
-                         "type": "string"
+                        "type": "string"
                     }
                 }, 
                 "calculate": {
-                    "type": "string",
+                    "type": "string"
                 }, 
                 "calculateOnClient": {
-                    "type": "string",
+                    "type": "string"
                 }, 
                 "calculateEngine": {
                     "type": "string",
                     "enum": "clientSideJS"
                 }, 
-                "defaultValue":{
+                "defaultValue": {
                     "type": "object",
                     "properties": {
-                       "string-value": {
-                           "type": "string"
+                        "string-value": {
+                            "type": "string"
                         },
-                       "number-value": {
-                           "type": "number"
-                       },
-                       "func-value": {
-                           "type": "string"
-                       }
+                        "number-value": {
+                            "type": "number"
+                        },
+                        "func-value": {
+                            "type": "string"
+                        }
                     }
                 },
                 "componentType": {
@@ -680,13 +710,13 @@
                 }
             }
         },
-        "eventPostSave":{
+        "eventPostSave": {
             "$ref": "#/definitions/event-item"
         },
-        "eventPreSave":{
+        "eventPreSave": {
             "$ref": "#/definitions/event-item"
         },
-        "eventPostDelete":{
+        "eventPostDelete": {
             "$ref": "#/definitions/event-item"
         },
         "actions": {
