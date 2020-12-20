@@ -330,21 +330,23 @@
                                     },
                                     "ref": {
                                         "type": "object",
-                                        "db": {
-                                            "type": "string"
-                                        },
-                                        "table": {
-                                            "type": "string"
-                                        },
-                                        "query": {
-                                            "type": "array",
-                                            "items": {
-                                                "$ref": "#/definitions/query-item"
+                                        "properties": {
+                                            "db": {
+                                                "type": "string"
+                                            },
+                                            "table": {
+                                                "type": "string"
+                                            },
+                                            "query": {
+                                                "type": "array",
+                                                "items": {
+                                                    "$ref": "#/definitions/query-item"
+                                                }
+                                            },
+                                            "check": {
+                                                "type": "string",
+                                                "enum": ["existence", "non-existance"]
                                             }
-                                        },
-                                        "check": {
-                                            "type": "string",
-                                            "enum": ["existence", "non-existance"]
                                         }
                                     }
                                 }
