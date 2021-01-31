@@ -1,4 +1,3 @@
-
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
@@ -31,7 +30,7 @@
                     }
                 },
                 "func": {
-                    "type": "string"                        
+                    "type": "string"
                 },
                 "shoot": {
                     "type": "boolean"
@@ -43,7 +42,7 @@
                             "type": "string"
                         },
                         "table": {
-                            "type": "string"                        
+                            "type": "string"
                         },
                         "query": {
                             "type": "object",
@@ -59,14 +58,17 @@
                                     "items": {
                                         "$ref": "#/definitions/query-item"
                                     }
-                                }                            
+                                }
                             }
                         },
                         "check": {
                             "type": "string",
-                            "enum": ["existence", "non-existance"]
-                        }                        
-                    }                    
+                            "enum": [
+                                "existence",
+                                "non-existance"
+                            ]
+                        }
+                    }
                 },
                 "action": {
                     "type": "object",
@@ -105,7 +107,11 @@
                                     },
                                     "op": {
                                         "type": "string",
-                                        "enum": ["upsert", "update", "insert"]
+                                        "enum": [
+                                            "upsert",
+                                            "update",
+                                            "insert"
+                                        ]
                                     }
                                 }
                             }
@@ -169,7 +175,10 @@
                                     },
                                     "check": {
                                         "type": "string",
-                                        "enum": ["existence", "non-existance"]
+                                        "enum": [
+                                            "existence",
+                                            "non-existance"
+                                        ]
                                     }
                                 }
                             }
@@ -182,46 +191,53 @@
             "type": "object",
             "properties": {
                 "code": {
-                    "type": "string"                   
+                    "type": "string"
                 },
                 "name": {
                     "type": "string"
-                }                
+                }
             }
         },
         "view-item": {
             "type": "object",
             "properties": {
                 "key": {
-                    "type": "string"                   
+                    "type": "string"
                 },
                 "permit": {
-                    "type": "string"                   
+                    "type": "string"
                 },
                 "order": {
                     "type": "number",
-                    "enum": [10, 20, 30]                    
-                }                
+                    "enum": [
+                        10,
+                        20,
+                        30
+                    ]
+                }
             }
         },
         "sort-item": {
             "type": "object",
             "properties": {
                 "key": {
-                    "type": "string"                   
+                    "type": "string"
                 },
                 "value": {
                     "type": "number",
-                    "enum": [1, -1]
-                }            
+                    "enum": [
+                        1,
+                        -1
+                    ]
+                }
             }
         },
         "query-item": {
             "type": "object",
             "properties": {
                 "key": {
-                    "type": "string"                   
-                },                
+                    "type": "string"
+                },
                 "fms-value": {
                     "type": "string",
                     "enum": [
@@ -263,8 +279,13 @@
                 },
                 "type": {
                     "type": "string",
-                    "enum": ["number", "string", "in", "ne"]                    
-                }  
+                    "enum": [
+                        "number",
+                        "string",
+                        "in",
+                        "ne"
+                    ]
+                }
             }
         },
         "field": {
@@ -281,13 +302,13 @@
                 },
                 "shortName": {
                     "type": "string"
-                },              
+                },
                 "labelStyle": {
                     "type": "string"
-                },              
+                },
                 "style": {
                     "type": "string"
-                },              
+                },
                 "order": {
                     "type": "number",
                     "minimum": 10,
@@ -300,12 +321,14 @@
                 },
                 "autoset": {
                     "type": "string",
-                    "enum": ["fms_code{{login_member_id}}"]
+                    "enum": [
+                        "fms_code{{login_member_id}}"
+                    ]
                 },
                 "rendered": {
                     "type": "object",
                     "properties": {
-                        "boolean-value": {  
+                        "boolean-value": {
                             "type": "boolean"
                         },
                         "func-value": {
@@ -326,7 +349,7 @@
                                         "type": "boolean"
                                     },
                                     "func": {
-                                        "type": "string"  
+                                        "type": "string"
                                     },
                                     "ref": {
                                         "type": "object",
@@ -345,14 +368,17 @@
                                             },
                                             "check": {
                                                 "type": "string",
-                                                "enum": ["existence", "non-existance"]
+                                                "enum": [
+                                                    "existence",
+                                                    "non-existance"
+                                                ]
                                             }
                                         }
                                     }
                                 }
                             }
                         }
-                    } 
+                    }
                 },
                 "shouldCheckNegative": {
                     "type": "boolean"
@@ -380,41 +406,34 @@
                 },
                 "quickFilter": {
                     "type": "boolean"
-                },  
+                },
                 "roleCheck": {
                     "type": "boolean"
-                },  
+                },
                 "money": {
-                    "type": "boolean"
-                },  
-                "calculated": {
-                    "type": "boolean"
-                },
-                "calculateOnListView": {
-                    "type": "boolean"
-                },
-                "calculateOnPost": {
-                    "type": "boolean"
-                },
-                "calculateOnSave": {
                     "type": "boolean"
                 },
                 "observable": {
                     "type": "boolean"
-                },  
+                },
                 "ajax": {
                     "type": "object",
                     "properties": {
                         "enable": {
                             "type": "boolean"
-                        }, 
+                        },
+                        "remove-non-rendered-field-on-record": {
+                            "type": "boolean"
+                        },
                         "action": {
                             "type": "string",
-                            "enum": ["render"]
-                        },  
+                            "enum": [
+                                "render"
+                            ]
+                        },
                         "show-hide": {
                             "type": "string"
-                        }, 
+                        },
                         "effected_keys": {
                             "type": "array",
                             "items": {
@@ -424,15 +443,43 @@
                     }
                 },
                 "calculate": {
-                    "type": "string"
-                }, 
-                "calculateOnClient": {
-                    "type": "string"
-                }, 
-                "calculateEngine": {
-                    "type": "string",
-                    "enum": "clientSideJS"
-                }, 
+                    "type": "object",
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean"
+                        },
+                        "action": {
+                            "type": "string"
+                        },
+                        "on-client": {
+                            "type": "string"
+                        },
+                        "on-list-view": {
+                            "type": "boolean"
+                        },
+                        "on-crud-view": {
+                            "type": "boolean"
+                        },
+                        "on-post": {
+                            "type": "boolean"
+                        },
+                        "on-save": {
+                            "type": "boolean"
+                        },
+                        "engine": {
+                            "type": "string",
+                            "enum": [
+                                "clientSideJS"
+                            ]
+                        },
+                        "calcCrudKeyList": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
                 "defaultValue": {
                     "type": "object",
                     "properties": {
@@ -444,16 +491,33 @@
                         },
                         "func-value": {
                             "type": "string"
+                        },
+                        "list-value": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
                         }
                     }
                 },
                 "componentType": {
                     "type": "string",
-                    "enum": ["inputText", "inputTextarea", "inputDate", "selectOneMenu", "selectBooleanCheckbox"]
+                    "enum": [
+                        "inputText",
+                        "inputTextarea",
+                        "inputDate",
+                        "selectOneMenu",
+                        "selectBooleanCheckbox"
+                    ]
                 },
                 "valueType": {
                     "type": "string",
-                    "enum": ["java.lang.String", "java.lang.Integer", "java.lang.Double", "java.lang.Boolean"]
+                    "enum": [
+                        "java.lang.String",
+                        "java.lang.Integer",
+                        "java.lang.Double",
+                        "java.lang.Boolean"
+                    ]
                 },
                 "accesscontrol": {
                     "type": "array",
@@ -461,24 +525,26 @@
                         "type": "string"
                     }
                 },
-                "calcCrudKeyList": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
                 "converter": {
                     "type": "string",
-                    "enum": ["SelectOneStringConverter", "SelectOneObjectIdConverter", "JsFunctionConverter"]
-                },      
+                    "enum": [
+                        "SelectOneStringConverter",
+                        "SelectOneObjectIdConverter",
+                        "JsFunctionConverter"
+                    ]
+                },
                 "converterFormat": {
                     "type": "string",
-                    "enum": ["##.###"]
-                },  
+                    "enum": [
+                        "##.###"
+                    ]
+                },
                 "converterInstance": {
                     "type": "string",
-                    "enum": ["number"]
-                }, 
+                    "enum": [
+                        "number"
+                    ]
+                },
                 "items": {
                     "type": "object",
                     "properties": {
@@ -502,7 +568,7 @@
                                             "items": {
                                                 "$ref": "#/definitions/query-item"
                                             }
-                                        }                            
+                                        }
                                     }
                                 },
                                 "sort": {
@@ -510,21 +576,21 @@
                                     "properties": {
                                         "func": {
                                             "type": "string"
-                                        },  
-                                        "list": {                                        
+                                        },
+                                        "list": {
                                             "type": "array",
                                             "items": {
                                                 "$ref": "#/definitions/sort-item"
                                             }
-                                        }                            
+                                        }
                                     }
                                 },
                                 "v": {
                                     "type": "array",
                                     "items": {
                                         "$ref": "#/definitions/view-item"
-                                    }         
-                                }                    
+                                    }
+                                }
                             }
                         },
                         "func": {
@@ -557,6 +623,23 @@
         "versionCollection": {
             "type": "string"
         },
+        "excelFormat": {
+            "type": "object",
+            "properties": {
+                "keys": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "limit": {
+                    "type": "number"
+                },
+                "template": {
+                    "type": "string"
+                }
+            }
+        },
         "user-constant-note": {
             "type": "object",
             "properties": {
@@ -567,11 +650,14 @@
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }  
+                    }
                 },
                 "list-check-strategy": {
                     "type": "string",
-                    "enum": ["oneof", "all"]
+                    "enum": [
+                        "oneof",
+                        "all"
+                    ]
                 },
                 "list": {
                     "type": "array",
@@ -588,40 +674,33 @@
                                 "type": "array",
                                 "items": {
                                     "type": "string"
-                                }  
+                                }
                             },
                             "priority-order": {
                                 "type": "number",
-                                "enum": [10, 20, 30, 40, 50] 
+                                "enum": [
+                                    10,
+                                    20,
+                                    30,
+                                    40,
+                                    50
+                                ]
                             }
                         }
                     }
                 }
-            } 
+            }
         },
         "userNote": {
-            "type": "string"
-        }, 
-        "funcNote": {
-            "type": "string"
-        },     
-        "form": {
-            "type": "string"
-        },
-        "name": {
-            "type": "string"
-        },
-        "forms": {
-            "type": "string"
-        },
-        "defaultSortField": {
-            "type": "string"
-        },
-        "loginFkField": {
-            "type": "string"
-        },
-        "menuOrder": {
-            "type": "number"
+            "type": "object",
+            "properties": {
+                "fnctn-val": {
+                    "type": "string"
+                },
+                "strng-val": {
+                    "type": "string"
+                }
+            }
         },
         "calculate-ref": {
             "type": "object",
@@ -650,15 +729,40 @@
                             }
                         }
                     }
-                }                
+                }
             }
+        },
+        "funcNote": {
+            "type": "string"
+        },
+        "form": {
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        },
+        "forms": {
+            "type": "string"
+        },
+        "defaultSortField": {
+            "type": "string"
+        },
+        "loginFkField": {
+            "type": "string"
+        },
+        "menuOrder": {
+            "type": "number"
         },
         "dimension": {
             "type": "object",
             "properties": {
                 "value": {
                     "type": "string",
-                    "enum": ["page", "table", "grid"]                            
+                    "enum": [
+                        "page",
+                        "table",
+                        "grid"
+                    ]
                 },
                 "list": {
                     "type": "array",
@@ -668,22 +772,29 @@
                             "roles": {
                                 "type": "array",
                                 "items": {
-                                    "type": "string"                                
+                                    "type": "string"
                                 }
                             },
                             "value": {
-                                "type": "string",    
-                                "enum": ["page", "table", "grid"]                            
+                                "type": "string",
+                                "enum": [
+                                    "page",
+                                    "table",
+                                    "grid"
+                                ]
                             }
                         }
                     }
                 }
-            }          
+            }
         },
         "type": {
             "type": "string",
-            "enum": ["node", "website"]
-        },  
+            "enum": [
+                "node",
+                "website"
+            ]
+        },
         "filter": {
             "type": "object",
             "properties": {
@@ -691,7 +802,7 @@
                     "type": "string"
                 }
             }
-        },       
+        },
         "myNamedQueries": {
             "type": "object",
             "properties": {
@@ -707,7 +818,7 @@
                                 "type": "array",
                                 "items": {
                                     "type": "string"
-                                }   
+                                }
                             },
                             "query": {
                                 "type": "object",
@@ -719,9 +830,9 @@
                                         "type": "array",
                                         "items": {
                                             "$ref": "#/definitions/query-item"
-                                        }                                     
+                                        }
                                     }
-                                }                                                          
+                                }
                             },
                             "priority": {
                                 "type": "number"
@@ -729,14 +840,14 @@
                         }
                     }
                 }
-            }            
+            }
         },
         "accesscontrol": {
             "type": "array",
             "items": {
                 "type": "string"
             }
-        },  
+        },
         "upperNodes": {
             "type": "array",
             "items": {
